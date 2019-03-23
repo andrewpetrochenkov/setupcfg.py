@@ -22,6 +22,21 @@ function|`__doc__`
 `setupcfg.get(section, option, default=None)` |return the value for option if option is in the `setup.cfg`, else default
 `setupcfg.getmodules()` |return a list of module objects
 `setupcfg.load(path='setup.cfg')` |return dictionary with `setup.cfg` sections dictionaries
+`setupcfg.values.string(value)` |Convert a value to a `setup.cfg` value string
+`setupcfg.values.value(string)` |Convert a string to a python value
+
+#### CLI
+usage|`__doc__`
+-|-
+`python -m setupcfg.metadata.description [description]` |read/write `setup.cfg` `[metadata]` `description`
+`python -m setupcfg.metadata.keywords [keywords]` |read/write `setup.cfg` `[metadata]` `keywords`
+`python -m setupcfg.metadata.name [name]` |read/write `setup.cfg` `[metadata]` `name`
+`python -m setupcfg.metadata.url [url]` |read/write `setup.cfg` `[metadata]` `url`
+`python -m setupcfg.metadata.version [version]` |read/write `setup.cfg` `[metadata]` `version`
+`python -m setupcfg.options.install_requires [requires ...]` |read/write `setup.cfg` `[options]` `install_requires`
+`python -m setupcfg.options.packages [package ...]` |read/write `setup.cfg` `[options]` `packages`
+`python -m setupcfg.options.py_modules [module ...]` |read/write `setup.cfg` `[options]` `py_modules`
+`python -m setupcfg.options.scripts [script ...]` |read/write `setup.cfg` `[options]` `scripts`
 
 #### Related projects
 +   [`classifiers-generator` - classifiers generator](https://pypi.org/project/readme-docstring/)
