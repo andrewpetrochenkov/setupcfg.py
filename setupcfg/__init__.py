@@ -34,9 +34,13 @@ def getmodules():
     packages = options.get("packages", [])
     for pkg_name in packages:
         module = pydoc.locate(pkg_name)
-        modules.append(module)
+        if module:
+            modules.append(module)
+        else:
+            raise ImportError(pkg_name)
         for module, modname, _ in pkgutil.iter_modules([os.path.dirname(module.__file__)]):
             name = "%s.%s" % (pkg_name, modname)
             if name not in packages:
                 modules.append(pydoc.locate(name))
     return list(sorted(modules, key=lambda m: m.__name__))
+

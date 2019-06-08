@@ -1,5 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
 -->
 
 [![](https://img.shields.io/pypi/pyversions/setupcfg.svg?longCache=True)](https://pypi.org/project/setupcfg/)
@@ -25,7 +26,7 @@ function|`__doc__`
 `setupcfg.values.string(value)` |Convert a value to a `setup.cfg` value string
 `setupcfg.values.value(string)` |Convert a string to a python value
 
-#### CLI
+#### Executable modules
 usage|`__doc__`
 -|-
 `python -m setupcfg.metadata.description [description]` |read/write `setup.cfg` `[metadata]` `description`
@@ -51,5 +52,5 @@ usage|`__doc__`
 +   [Specifying values](http://setuptools.readthedocs.io/en/latest/setuptools.html#specifying-values)
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>
