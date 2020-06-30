@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-import public
+__all__ = ['string', 'value']
+
 
 """
 http://setuptools.readthedocs.io/en/latest/setuptools.html#specifying-values
@@ -45,7 +45,6 @@ def _string2dict(string):
     return result
 
 
-@public.add
 def string(value):
     """Convert a value to a `setup.cfg` value string"""
     if isinstance(value, bool):
@@ -57,7 +56,6 @@ def string(value):
     return str(value).rstrip()
 
 
-@public.add
 def value(string):
     """Convert a string to a python value"""
     if len(string.splitlines()) > 1 and not string.splitlines()[0]:
